@@ -9,8 +9,7 @@ Salida  : eda/figures/errores_por_segmento_<escenario>.csv
           eda/figures/errores_por_estado_<escenario>.png
           eda/figures/errores_estabilidad_mensual_<escenario>.png
 
-La profesora pidio "una explicacion de los errores que todavia presenta el
-sistema". Este script responde tres preguntas sobre el TEST:
+Este script responde tres preguntas sobre el TEST:
   1. DONDE falla: en que estados, horas, climas... el modelo detecta menos
      (recall bajo), se equivoca mas en sus alertas (precision baja) o concentra
      los criticos que no detecta.
