@@ -1,0 +1,85 @@
+{
+  "escenario": "tiempo_real",
+  "creado": "2026-10-28T15:41:22",
+  "metodo_final": "Stacking",
+  "estrategia_balanceo": "Pesos_completos",
+  "umbral": 0.09931431788837632,
+  "franja_vigilancia": [
+    0.0674431038086347,
+    0.1385780198067304
+  ],
+  "versiones": {
+    "python": "3.11.9",
+    "pandas": "3.0.5",
+    "numpy": "2.4.6",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.2.0",
+    "lightgbm": "4.7.0",
+    "joblib": "1.6.0",
+    "shap": "0.51.0",
+    "imbalanced-learn": "0.14.2"
+  },
+  "verificacion": {
+    "error_maximo_probabilidad": 1.4549323468227016e-08,
+    "incidentes_verificados": 2000,
+    "todo_ok": true,
+    "curva_umbral_filas": 242,
+    "curva_umbral_diferencia_maxima_vs_script_03": 1.1102230246251565e-16
+  },
+  "archivos": [
+    {
+      "archivo": "apilador.joblib",
+      "mb": 0.0,
+      "sha256": "5a361351e8adece89789ab095a6354e2f2c9e91854880fce9e524b846889fc4b",
+      "ubicacion": "models/tiempo_real"
+    },
+    {
+      "archivo": "decision.json",
+      "mb": 0.0,
+      "sha256": "94e77fb6cdf38661316427a4619c1ec918d255046d030de68f36a8784300cc5d",
+      "ubicacion": "models/tiempo_real"
+    },
+    {
+      "archivo": "explicador_estado.json",
+      "mb": 0.0,
+      "sha256": "6b910fdddb43940911a648f1e50af1cc73802773f02029cd5e8616c1ef5b5e8b",
+      "ubicacion": "models/tiempo_real"
+    },
+    {
+      "archivo": "features.txt",
+      "mb": 0.0,
+      "sha256": "fd9edff63b5b96cb92c8e7a6999ec9d253191c512bb089d49356de3a022b2795",
+      "ubicacion": "models/tiempo_real"
+    },
+    {
+      "archivo": "modelo_LightGBM.joblib",
+      "mb": 2.69,
+      "sha256": "ae7328c983c930c8ee3552b110d166b53eba5d0421cd3ed28ede41daa6042948",
+      "ubicacion": "models/tiempo_real"
+    },
+    {
+      "archivo": "modelo_Random_Forest.joblib",
+      "mb": 5.72,
+      "sha256": "8e3b492c06e894d4dd8a3014d73ce1207541ff8134102708f8708fcbedfa8228",
+      "ubicacion": "models/tiempo_real"
+    },
+    {
+      "archivo": "modelo_Regresion_Logistica.joblib",
+      "mb": 0.0,
+      "sha256": "da048b2dd8ded4a6f6c0974c6c1183755f6c3976d4676a00b9b87a2269f3dd8c",
+      "ubicacion": "models/tiempo_real"
+    },
+    {
+      "archivo": "modelo_XGBoost.joblib",
+      "mb": 2.96,
+      "sha256": "d92ad4e4ad7baef9adac24e5ca7b65c75a56a3a777781805e39b8344f0fb239a",
+      "ubicacion": "models/tiempo_real"
+    },
+    {
+      "archivo": "preprocesador.joblib",
+      "mb": 0.01,
+      "sha256": "d5c95321a76f75bb1f42af18bd65dfcbef60efdd7cc1deeb298dae5ac77178fb",
+      "ubicacion": "models/tiempo_real"
+    }
+  ]
+}

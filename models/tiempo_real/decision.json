@@ -1,0 +1,40 @@
+{
+  "escenario": "tiempo_real",
+  "metodo_final": "Stacking",
+  "estrategia_balanceo": "Pesos_completos",
+  "umbral": 0.09931431788837632,
+  "umbral_vigilancia_inferior": 0.0674431038086347,
+  "umbral_vigilancia_superior": 0.1385780198067304,
+  "exactitud_minima_validacion": 0.94,
+  "coeficientes_apilador": {
+    "intercepto": -3.5969713675216743,
+    "Random_Forest": -0.016892739014156215,
+    "XGBoost": 0.348292231282161,
+    "LightGBM": 0.8138206839529466,
+    "Regresion_Logistica": -0.11420895856411502
+  },
+  "pesos_promedio_ponderado": {
+    "Random_Forest": 0.23435830616608355,
+    "XGBoost": 0.3024356157447319,
+    "LightGBM": 0.30065741970995163,
+    "Regresion_Logistica": 0.16254865837923296
+  },
+  "calibradores_platt": {
+    "Random_Forest": {
+      "a": 1.578974785454681,
+      "b": -3.7983588266520214
+    },
+    "XGBoost": {
+      "a": 0.989908626138426,
+      "b": -3.4981069395877324
+    },
+    "LightGBM": {
+      "a": 1.0834824386254072,
+      "b": -3.6884947930696415
+    },
+    "Regresion_Logistica": {
+      "a": 0.8188881766144998,
+      "b": -3.80961772373908
+    }
+  }
+}
