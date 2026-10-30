@@ -1,0 +1,25 @@
+# --- Datos y salidas pesadas (regenerables): NO se suben ---------------------
+data/*
+!data/README.md
+outputs/*
+!outputs/README.md
+
+# Seguro contra accidentes: GitHub rechaza archivos > 100 MB
+*.npz
+*.parquet
+
+# --- Python ------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# --- Sistema / editor --------------------------------------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

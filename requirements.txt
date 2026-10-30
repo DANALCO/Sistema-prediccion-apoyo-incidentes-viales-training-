@@ -1,0 +1,20 @@
+# Nucleo del pipeline (scripts 01 y 02)
+pandas>=2.2
+numpy>=1.26
+scikit-learn>=1.4
+imbalanced-learn>=0.12
+joblib>=1.3
+pyarrow>=14
+scipy>=1.11
+
+# Modelado, EDA y explicabilidad (a partir del script 03)
+xgboost
+lightgbm
+shap
+matplotlib
+seaborn
+
+# Cuando termine el entrenamiento final, congele las versiones EXACTAS:
+#   pip freeze > requirements-lock.txt
+# y use las mismas en el repositorio de la app (los modelos guardados con
+# joblib/pickle solo cargan bien con las mismas versiones de las librerias).
