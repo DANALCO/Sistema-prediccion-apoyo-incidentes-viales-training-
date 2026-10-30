@@ -1,0 +1,5 @@
+Estrategia,Alertas_%,Recall,Precision,PR_AUC,ROC_AUC,Estados_recall>=10%,Recall_CA,Recall_FL,Recall_NY,Recall_VA,Recall_SC
+Global (actual),5.74781,0.45376,0.21465,0.19143,0.8571,16,0.0,0.0,0.36538,0.72464,0.0
+Recalibrado por estado,5.74781,0.46426,0.21962,0.19441,0.86163,16,0.0,0.0,0.32692,0.71146,0.0
+Relativo al estado,5.74781,0.30752,0.14547,0.10742,0.7901,16,0.07819,0.38095,0.43269,0.57181,0.04
+Cobertura pareja,5.74725,0.23563,0.11148,,,24,0.17284,0.33333,0.47596,0.2635,0.1
