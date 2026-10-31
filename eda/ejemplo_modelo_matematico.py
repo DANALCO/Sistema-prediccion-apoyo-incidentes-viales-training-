@@ -9,17 +9,23 @@ decision con su zona y los aportes SHAP. Tambien imprime los parametros de
 Platt (a, b) de cada modelo.
 
 Solo LEE: usa los artefactos de models/<escenario>/ (script 06) y la tabla
-limpia. No entrena nada y NO lee el test: el ejemplo sale de val_umbral, para
-no mirar el test al escoger un caso ilustrativo.
+limpia. No entrena nada. Por defecto NO lee el test: el ejemplo sale de
+val_umbral, para no mirar el test al escoger un caso ilustrativo.
 
 El incidente se escoge sin azar y sin mirar lo bonito del resultado: entre los
-incidentes de val_umbral que fueron criticos y cayeron en la zona Critico, el
+incidentes de la particion que fueron criticos y cayeron en la zona Critico, el
 que tiene la probabilidad MEDIANA. Es decir, un acierto tipico, no el mejor.
+
+Con --particion test se ilustra el mismo calculo con un incidente del conjunto
+de prueba (que el modelo nunca vio). La regla de escogencia es la misma y esta
+fijada de antemano; el caso solo ilustra: ninguna decision del proyecto (umbral,
+bordes, hiperparametros, balanceo) se toma con el.
 
 Uso (desde la raiz del repositorio):
     python eda/ejemplo_modelo_matematico.py
     python eda/ejemplo_modelo_matematico.py --escenario informacion_completa
     python eda/ejemplo_modelo_matematico.py --particion val_ajuste
+    python eda/ejemplo_modelo_matematico.py --particion test
 =============================================================================
 """
 
@@ -57,7 +63,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--modelos", default="models", help="carpeta con <escenario>/ (por defecto models)")
     ap.add_argument("--escenario", default="tiempo_real")
-    ap.add_argument("--particion", default="val_umbral", choices=["val_umbral", "val_ajuste"])
+    ap.add_argument("--particion", default="val_umbral", choices=["val_umbral", "val_ajuste", "test"])
     ap.add_argument("--arriba", type=int, default=6, help="cuantas variables de SHAP mostrar")
     args = ap.parse_args()
 
@@ -77,6 +83,8 @@ def main():
     fila = entrada.loc[[elegido]].reset_index(drop=True)
 
     titulo(f"EJEMPLO NUMERICO - {args.escenario}  (incidente real de {args.particion}, critico, acierto tipico)")
+    if args.particion == "test":
+        print("Caso del conjunto de prueba: el modelo nunca lo vio. Solo ilustra; con el no se decidio nada.")
 
     # [1] El incidente tal como llega al formulario ---------------------------------------
     print("\n[1] Campos del incidente (los que conoce el operador al reportarlo)")
